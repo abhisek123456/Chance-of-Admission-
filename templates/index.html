@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div style="color:blue">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h2>Predictive analysis</h2>
+            <h3>What is your GRE Score?(out of 340)</h3>
+            <input id="first" name="GRE_Score" type="number " required="required">
+            <h3>What is your TOEFL Score?(out of 120)</h3><br><input id="second" name="TOEFL_Score" required="required" type="number ">
+            <h3>What is your SOP Score?(out of 5)</h3><input id="third" name="SOP" required="required"  type="number ", required="required" >
+         
+            <h3>What is your LOR Score?(out of 5)</h3><input id="fifth" name="LOR" required="required"  type="number " , required="required">
+            <h3>What is your CGPA Score?(out of 10)</h3><input id="sixth" name="CGPA" required="required"  type="number ", required="required" >
+            <br><br><button id="sub" type="submit ">Calculate the Chances of admission</button><br>
+
+
+
+
+        </form>
+
+
+
+        <br><br><h3>{{ prediction_text }}<h3>
+    </div>
+
+
+
+
+
+</body>
+
+</html>
